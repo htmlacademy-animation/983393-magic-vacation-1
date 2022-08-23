@@ -1,3 +1,8 @@
+@keyframes fadeInHistory {
+  from {opacity: 0; transform: translateX(10px);}
+  to {opacity: 1; transform: translateX(0px);}
+}
+
 .slider {
   position: relative;
   flex-grow: 1;
@@ -35,7 +40,6 @@
     flex-direction: column;
     padding: 5rem 2rem 0 5rem;
   }
-
   &:nth-child(even) {
     .slider__item-text {
       align-self: flex-end;
@@ -62,6 +66,11 @@
         margin-top: auto;
       }
     }
+  }
+}
+.swiper-slide-active,.swiper-slide-next {
+  .slider__item-text {
+    animation: fadeInHistory 1s ease-in;
   }
 }
 

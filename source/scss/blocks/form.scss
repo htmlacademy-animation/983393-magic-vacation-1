@@ -1,3 +1,11 @@
+@keyframes fade {
+  from {right: 0; transform: translateX(-10%);}
+  to {right: 100%; transform: translateX(-100%);}
+}
+@keyframes fadeAfter {
+  from {right: -9px;}
+  to {right: -54px;}
+}
 .form {
   position: relative;
   display: flex;
@@ -75,6 +83,25 @@
     width: calc(100% - 5rem);
     height: 4rem;
     font-size: 1.6rem;
+  }
+}
+.message-mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  transition-delay: 4s;
+  background-color: #5f458c;
+  animation: fade 1s ease-in;
+  &:after{
+    content: '';
+    height: 98%;
+    width: 54px;
+    background-color: white;
+    position: absolute;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    animation: fadeAfter 1.2s ease-in;
   }
 }
 
