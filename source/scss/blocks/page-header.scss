@@ -231,6 +231,7 @@
 
   li {
     margin-left: 4rem;
+    overflow: hidden;
 
     @media (min-width: $stop-scaling) {
       margin-left: 40px;
@@ -285,6 +286,10 @@
     &.active {
       &::after {
         display: block;
+        width: 100%;
+        transform: translateX(-100%);
+        transition-delay: 0.5s;
+        transition: all 0.8s linear;
       }
     }
 
@@ -296,6 +301,9 @@
       &::after {
         opacity: 1;
         background-color: $c-purple;
+        left: 0;
+        right: auto;
+        width: 100%;
       }
     }
   }
@@ -336,5 +344,8 @@
   .screen__footer {
     opacity: 1;
     transform: translateY(0%);
+  }
+  .page-header__menu a.active::after {
+    transform: translateX(0%);
   }
 }
