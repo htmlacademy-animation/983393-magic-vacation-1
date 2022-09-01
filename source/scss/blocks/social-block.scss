@@ -22,6 +22,9 @@
   height: 4rem;
   color: $c-dark;
   border-radius: 50%;
+  @include move-head-foot;
+  transition-delay: 0.8s;
+  opacity: 0;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     display: none;
