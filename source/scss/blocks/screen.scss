@@ -17,6 +17,23 @@
   @media (max-width: $tablet - 1) and (orientation: landscape) {
     height: 100vh;
   }
+  &--cover {
+    height: 100vh;
+    width: 100%;
+    background-color: $c-dark;
+    transform: translateY(100%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 9;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+  }
+  &--cover-active {
+    transform: translateY(0);
+    transition: transform 0.5s ease-in;
+    opacity: 1;
+  }
 }
 
 .screen__wrapper {
@@ -45,7 +62,7 @@
   right: 0;
   color: $c-dark;
   background-color: $c-light;
-  z-index: 1;
+  z-index: 11;
   transform: translateY(100%);
   opacity: 0;
   @include move-head-foot;

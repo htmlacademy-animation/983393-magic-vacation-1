@@ -341,7 +341,7 @@
   .social-block__toggler {
     opacity: 1;
     &:before {
-      animation: pump 1s ease;
+      animation: pump 1s 0.3s ease-in;
     }
   }
   .screen__footer {
